@@ -5,5 +5,6 @@ interface LoginNavigator {
     fun forgret()
     fun navigateToRegister()
     fun navigateToHome()
+    fun navigateToForget()
 
 }

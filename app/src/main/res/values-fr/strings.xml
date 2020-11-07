@@ -21,6 +21,13 @@
     <string name="forgetMenu">Password Oubliée</string>
     <string name="loginMenu">Se Connecter </string>
     <string name="registerMenu">Inscrire </string>
+    <string name="zero">ZERO </string>
+    <string name="tare">TARE </string>
+    <string name="save">ENREGISTRER </string>
+    <string name="show">BILAN </string>
+    <string name="client">CLIENT </string>
+    <string name="produit">PRODUIT </string>
+
 
 
 

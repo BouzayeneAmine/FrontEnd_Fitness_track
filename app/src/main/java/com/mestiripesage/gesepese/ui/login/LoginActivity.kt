@@ -7,6 +7,7 @@ import androidx.lifecycle.ViewModelProviders
 import com.mestiripesage.gesepese.R
 import com.mestiripesage.gesepese.databinding.ActivityLoginBinding
 import com.mestiripesage.gesepese.ui.base.BaseActivity
+import com.mestiripesage.gesepese.ui.forget.ForgetPasswordActivity
 import com.mestiripesage.gesepese.ui.home.HomeActivity
 import com.mestiripesage.gesepese.ui.products.listProduct.ListProductActivity
 import com.mestiripesage.gesepese.ui.register.RegisterActivity
@@ -55,5 +56,8 @@ class LoginActivity : BaseActivity<ActivityLoginBinding>(),LoginNavigator {
     override fun navigateToHome() {
         startActivity(Intent(this,ListProductActivity::class.java))
     }
+
+    override fun navigateToForget() {
+        startActivity(Intent(this,ForgetPasswordActivity::class.java))    }
 
 }

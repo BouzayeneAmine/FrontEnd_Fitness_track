@@ -21,6 +21,13 @@
     <string name="forgetMenu">Forget Password</string>
     <string name="loginMenu">Login </string>
     <string name="registerMenu">Register </string>
+    <string name="zero">ZERO </string>
+    <string name="tare">TARE </string>
+    <string name="save">SAVE </string>
+    <string name="show">SHOW </string>
+    <string name="client">CUSTOMER </string>
+    <string name="produit">PRODUCT </string>
+
 
 
 </resources>

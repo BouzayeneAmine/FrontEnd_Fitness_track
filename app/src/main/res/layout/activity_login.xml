@@ -24,16 +24,17 @@
             android:id="@+id/button"
             android:layout_width="217dp"
             android:layout_height="36dp"
+            android:layout_marginTop="8dp"
             android:background=" #4DA8DA"
             android:onClick="@{()-> viewModel.login()}"
             android:text="@string/signin"
             android:textColor="#ffffff"
-            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintBottom_toTopOf="@+id/button2"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.504"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.567" />
+            app:layout_constraintVertical_bias="0.96" />
 
         <EditText
             android:id="@+id/editTextTextEmailAddress"
@@ -47,12 +48,12 @@
             android:inputType="textEmailAddress"
             android:text="@={viewModel.email}"
             android:textColorHint="#f5f6fa"
-            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintBottom_toTopOf="@+id/editTextTextPassword"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.504"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.267" />
+            app:layout_constraintVertical_bias="0.896" />
 
         <EditText
             android:id="@+id/editTextTextPassword"
@@ -63,26 +64,29 @@
             android:inputType="textPassword"
             android:text="@={viewModel.password}"
             android:textColorHint="#f5f6fa"
-            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintBottom_toTopOf="@+id/button"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.504"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.426" />
+            app:layout_constraintVertical_bias="0.855" />
 
         <Button
             android:id="@+id/button2"
             android:layout_width="217dp"
             android:layout_height="20dp"
-            android:layout_marginBottom="152dp"
+            android:layout_marginBottom="28dp"
             android:background="#1B1464"
+            android:onClick="@{()-> viewModel.navigateToForget()}"
             android:text="@string/forgot"
             android:textColor="#ffffff"
             android:textSize="8sp"
-            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintBottom_toTopOf="@+id/button4"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.504"
-            app:layout_constraintStart_toStartOf="parent" />
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.843" />
 
         <Button
             android:id="@+id/button4"
@@ -107,12 +111,11 @@
             android:text="@string/loginMenu"
             android:textColor="#ffffff"
             android:textSize="30sp"
-            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintBottom_toTopOf="@+id/editTextTextEmailAddress"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.616"
+            app:layout_constraintHorizontal_bias="0.502"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.059" />
+            app:layout_constraintTop_toTopOf="parent" />
     </androidx.constraintlayout.widget.ConstraintLayout>
 
 </layout>

@@ -68,6 +68,11 @@ class LoginViewModel : BaseViewModel<LoginNavigator>() {
 
         getNavigator()?.navigateToRegister();
     }
+    fun navigateToForget() {
+
+
+        getNavigator()?.navigateToForget();
+    }
 
 }
 
