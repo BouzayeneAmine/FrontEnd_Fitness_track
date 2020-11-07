@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+    <data>
+        <variable
+            name="viewModel"
+            type="com.mestiripesage.gesepese.ui.register.RegisterViewModel" />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#1B1464"
+        tools:context=".ui.register.RegisterActivity">
+
+        <EditText
+            android:id="@+id/editTextTextPersonName13"
+            android:layout_width="148dp"
+            android:layout_height="84dp"
+            android:ems="10"
+            android:inputType="textPersonName"
+            android:text="@string/registerMenu"
+            android:textColor="#ffffff"
+            android:textSize="36sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.037" />
+
+        <EditText
+            android:id="@+id/editTextTextPersonName"
+            android:layout_width="160dp"
+            android:layout_height="45dp"
+            android:ems="10"
+            android:hint="@string/FirstName"
+
+            android:inputType="textPersonName"
+            android:text="@={viewModel.firstName}"
+            android:textColorHint="#ffffff"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.107"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.239" />
+
+        <EditText
+            android:id="@+id/editTextTextPersonName2"
+            android:layout_width="160dp"
+            android:layout_height="45dp"
+            android:ems="10"
+            android:hint="@string/LastName"
+
+            android:inputType="textPersonName"
+            android:text="@={viewModel.lastName()}"
+            android:textColorHint="#ffffff"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.932"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.239" />
+
+        <EditText
+            android:id="@+id/editTextPhone"
+            android:layout_width="200dp"
+            android:layout_height="45dp"
+            android:ems="10"
+            android:hint="@string/email"
+
+            android:inputType="textEmailAddress"
+            android:text="@={viewModel.email}"
+            android:textColorHint="#ffffff"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.53"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <EditText
+            android:id="@+id/editTextTextEmailAddress2"
+            android:layout_width="200dp"
+            android:layout_height="45dp"
+            android:ems="10"
+            android:hint="@string/password"
+            android:inputType="numberPassword"
+
+            android:text="@={viewModel.password}"
+            android:textColorHint="#ffffff"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.53"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.631" />
+
+        <EditText
+            android:id="@+id/editTextTextPersonName3"
+            android:layout_width="200dp"
+            android:layout_height="45dp"
+            android:ems="10"
+            android:hint="@string/phone"
+            android:inputType="textPersonName"
+
+            android:text="@={viewModel.phone}"
+            android:textColorHint="#ffffff"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.53"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.367" />
+
+        <Button
+            android:id="@+id/button3"
+            android:layout_width="123dp"
+            android:layout_height="64dp"
+            android:background=" #4DA8DA"
+            android:onClick="@{()-> viewModel.register()}"
+            android:text="@string/register"
+            android:textColor="#ffffff"
+
+            android:textSize="14sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.84" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

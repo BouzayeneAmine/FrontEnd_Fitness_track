@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<layout  xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+      <data>
+
+          <variable
+              name="viewModel"
+              type="com.mestiripesage.gesepese.ui.login.LoginViewModel" />
+      </data>
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#1B1464"
+        tools:context=".ui.login.LoginActivity">
+        // email
+
+        //password
+
+        <Button
+            android:id="@+id/button"
+            android:layout_width="217dp"
+            android:layout_height="36dp"
+            android:background=" #4DA8DA"
+            android:onClick="@{()-> viewModel.login()}"
+            android:text="@string/signin"
+            android:textColor="#ffffff"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.504"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.567" />
+
+        <EditText
+            android:id="@+id/editTextTextEmailAddress"
+            android:layout_width="217dp"
+            android:layout_height="46dp"
+
+
+            android:ems="10"
+            android:hint="@string/email"
+
+            android:inputType="textEmailAddress"
+            android:text="@={viewModel.email}"
+            android:textColorHint="#f5f6fa"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.504"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.267" />
+
+        <EditText
+            android:id="@+id/editTextTextPassword"
+            android:layout_width="217dp"
+            android:layout_height="46dp"
+            android:ems="10"
+            android:hint="@string/password"
+            android:inputType="textPassword"
+            android:text="@={viewModel.password}"
+            android:textColorHint="#f5f6fa"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.504"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.426" />
+
+        <Button
+            android:id="@+id/button2"
+            android:layout_width="217dp"
+            android:layout_height="20dp"
+            android:layout_marginBottom="152dp"
+            android:background="#1B1464"
+            android:text="@string/forgot"
+            android:textColor="#ffffff"
+            android:textSize="8sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.504"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <Button
+            android:id="@+id/button4"
+            android:layout_width="152dp"
+            android:layout_height="35dp"
+            android:background="#2ed573"
+            android:onClick="@{()-> viewModel.navigateToRegister()}"
+            android:text="@string/register"
+            android:textColor="#ffffff"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.898" />
+
+        <EditText
+            android:id="@+id/editTextTextPersonName7"
+            android:layout_width="135dp"
+            android:layout_height="59dp"
+            android:ems="10"
+            android:inputType="textPersonName"
+            android:text="@string/loginMenu"
+            android:textColor="#ffffff"
+            android:textSize="30sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.616"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.059" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</layout>

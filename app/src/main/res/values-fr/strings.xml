@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">GesePese</string>
+    <string name="signin">Inscription</string>
+    <string name="loading">Chargement</string>
+    <string name="forgot">mot de passe oublieé</string>
+    <string name="email">email</string>
+    <string name="password">password</string>
+    <string name="FirstName">Prénom</string>
+    <string name="LastName">Nom</string>
+    <string name="register">Registrer</string>
+    <string name="phone">Téléphone</string>
+    <string name="sent">envoyer</string>
+    <string name="Product">produit</string>
+    <string name="productName">le nom du produit</string>
+    <string name="productQuantity">la Quantité du produit</string>
+    <string name="productDescription">la Description du produit</string>
+    <string name="productPrice">le prix de produit</string>
+    <string name="add">ajouter</string>
+    <string name="mestiri">Par Mestiri Pesage</string>
+    <string name="forgetMenu">Password Oubliée</string>
+    <string name="loginMenu">Se Connecter </string>
+    <string name="registerMenu">Inscrire </string>
+
+
+
+</resources>

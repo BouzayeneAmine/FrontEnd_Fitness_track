@@ -1,0 +1,24 @@
+<resources>
+    <string name="app_name">GesePese</string>
+    <string name="loading">GesePese</string>
+    <string name="signin">SignIn</string>
+    <string name="forgot">Forgot password</string>
+    <string name="email">email</string>
+    <string name="password">password</string>
+    <string name="FirstName">FirstName</string>
+    <string name="LastName">LastName</string>
+    <string name="register">Register</string>
+    <string name="phone">Phone</string>
+    <string name="sent">sent</string>
+    <string name="Product">Product</string>
+    <string name="productName">product_name</string>
+    <string name="productQuantity">product_quantity</string>
+    <string name="productDescription">product_description</string>
+    <string name="productPrice">product_price</string>
+    <string name="add">add</string>
+    <string name="mestiri">By Mestiri Pesage</string>
+    <string name="forgetMenu">Forget Password</string>
+    <string name="loginMenu">Login </string>
+    <string name="registerMenu">Register </string>
+
+</resources>
