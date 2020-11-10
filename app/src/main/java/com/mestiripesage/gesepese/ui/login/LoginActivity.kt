@@ -54,10 +54,11 @@ class LoginActivity : BaseActivity<ActivityLoginBinding>(),LoginNavigator {
     }
 
     override fun navigateToHome() {
-        startActivity(Intent(this,ListProductActivity::class.java))
+        startActivity(Intent(this,HomeActivity::class.java))
     }
 
     override fun navigateToForget() {
         startActivity(Intent(this,ForgetPasswordActivity::class.java))    }
+
 
 }

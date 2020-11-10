@@ -7,4 +7,5 @@ interface LoginNavigator {
     fun navigateToHome()
     fun navigateToForget()
 
+
 }

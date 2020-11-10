@@ -74,5 +74,11 @@ class LoginViewModel : BaseViewModel<LoginNavigator>() {
         getNavigator()?.navigateToForget();
     }
 
+    fun navigateToHome() {
+
+
+        getNavigator()?.navigateToHome();
+    }
+
 }
 
