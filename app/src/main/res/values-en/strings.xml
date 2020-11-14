@@ -27,7 +27,7 @@
     <string name="show">SHOW </string>
     <string name="client">CUSTOMER </string>
     <string name="produit">PRODUCT </string>
-
+    <string name="kg">Kg </string>
 
 
 </resources>

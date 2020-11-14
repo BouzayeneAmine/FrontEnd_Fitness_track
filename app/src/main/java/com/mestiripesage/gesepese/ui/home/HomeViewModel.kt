@@ -16,9 +16,10 @@ class HomeViewModel : BaseViewModel<HomeNavigator>() {
         Log.v(TAG, "tare done " )
         getNavigator()
     }
-
-
-
+ fun show() {
+     Log.v(TAG, "show button is done")
+     getNavigator()?.navigateToListeProduct()
+ }
 
 
     }

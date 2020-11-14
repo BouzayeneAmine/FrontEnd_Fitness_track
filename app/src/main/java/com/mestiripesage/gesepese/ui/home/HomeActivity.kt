@@ -29,8 +29,8 @@ class HomeActivity : BaseActivity<ActivityHomeBinding>(), HomeNavigator {
         model.setNavigator(this)
 
         getDataBanding()?.viewModel = model
-        getDataBanding()!!.button10.setOnClickListener(View.OnClickListener {
-            getDataBanding()!!.textView3.setText("0")
+        getDataBanding()!!.zeroImageButton.setOnClickListener(View.OnClickListener {
+            getDataBanding()!!.wheighInput.setText("0")
 
         })
     }
@@ -44,16 +44,22 @@ class HomeActivity : BaseActivity<ActivityHomeBinding>(), HomeNavigator {
 
 
 if (tare.equals("0.0")){
-    tare =getDataBanding()!!.textView3.text.toString().toDouble();
-    getDataBanding()!!.textView3.setText("0")
+    tare =getDataBanding()!!.wheighInput.text.toString().toDouble();
+    getDataBanding()!!.wheighInput.setText("0")
 }
 else {
-    wheight = getDataBanding()!!.textView3.toString().toDouble();
+    wheight = getDataBanding()!!.wheighInput.toString().toDouble();
     wheight=wheight+tare;
-    getDataBanding()!!.textView3.setText(wheight.toString())
+    getDataBanding()!!.wheighInput.setText(wheight.toString())
 
 }
 
 
     }
+
+    override fun navigateToListeProduct() {
+        startActivity(Intent(this,ListProductActivity::class.java))
+    }
+
+
 }

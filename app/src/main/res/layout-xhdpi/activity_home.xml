@@ -11,20 +11,20 @@
     </data>
 
     <androidx.constraintlayout.widget.ConstraintLayout
-        android:layout_width="369dp"
-        android:layout_height="552dp"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
         android:background="#1B1464"
         tools:context=".ui.home.HomeActivity">
 
 
         <TextView
             android:id="@+id/wheighInput"
-            android:layout_width="262dp"
-            android:layout_height="99dp"
+            android:layout_width="438dp"
+            android:layout_height="172dp"
             android:gravity="center"
             android:text="0.000 "
             android:textColor="#ffffff"
-            android:textSize="70sp"
+            android:textSize="100sp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
@@ -33,8 +33,8 @@
 
         <ImageButton
             android:id="@+id/zeroImageButton"
-            android:layout_width="90dp"
-            android:layout_height="95dp"
+            android:layout_width="300dp"
+            android:layout_height="220dp"
             android:layout_weight="1"
             android:adjustViewBounds="true"
             android:background="#1B1464"
@@ -42,17 +42,17 @@
             android:scaleType="fitCenter"
             app:layout_constraintBottom_toTopOf="@+id/showImageButton"
             app:layout_constraintEnd_toStartOf="@+id/tareImageButton"
-            app:layout_constraintHorizontal_bias="0.322"
+            app:layout_constraintHorizontal_bias="0.444"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/wheighInput"
-            app:layout_constraintVertical_bias="0.504"
+            app:layout_constraintVertical_bias="0.41"
             app:srcCompat="@mipmap/ic_zero" />
 
         <ImageButton
             android:id="@+id/tareImageButton"
-            android:layout_width="90dp"
-            android:layout_height="95dp"
-            android:layout_marginEnd="28dp"
+            android:layout_width="300dp"
+            android:layout_height="220dp"
+            android:layout_marginEnd="8dp"
             android:background="#1B1464"
             android:onClick="@{()-> viewModel.tare()}"
             android:padding="1dp"
@@ -60,44 +60,44 @@
             app:layout_constraintBottom_toTopOf="@+id/clientImageButton"
             app:layout_constraintEnd_toStartOf="@+id/saveImageButton"
             app:layout_constraintTop_toBottomOf="@+id/wheighInput"
-            app:layout_constraintVertical_bias="0.504"
+            app:layout_constraintVertical_bias="0.411"
             app:srcCompat="@mipmap/ic_tarescale" />
 
         <ImageButton
             android:id="@+id/saveImageButton"
-            android:layout_width="90dp"
-            android:layout_height="95dp"
-            android:layout_marginEnd="20dp"
+            android:layout_width="300dp"
+            android:layout_height="220dp"
+            android:layout_marginEnd="16dp"
             android:background="#1B1464"
             android:padding="1dp"
             android:scaleType="fitCenter"
             app:layout_constraintBottom_toTopOf="@+id/productImageButton"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/wheighInput"
-            app:layout_constraintVertical_bias="0.504"
+            app:layout_constraintVertical_bias="0.411"
             app:srcCompat="@mipmap/ic_save" />
 
         <ImageButton
             android:id="@+id/showImageButton"
-            android:layout_width="90dp"
-            android:layout_height="95dp"
-            android:layout_marginBottom="112dp"
+            android:layout_width="300dp"
+            android:layout_height="220dp"
+            android:layout_marginBottom="468dp"
             android:background="#1B1464"
-            android:padding="1dp"
 
+            android:padding="1dp"
             android:scaleType="fitCenter"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toStartOf="@+id/clientImageButton"
-            app:layout_constraintHorizontal_bias="0.313"
+            app:layout_constraintHorizontal_bias="0.194"
             app:layout_constraintStart_toStartOf="parent"
             app:srcCompat="@mipmap/ic_show" />
 
         <ImageButton
             android:id="@+id/clientImageButton"
-            android:layout_width="90dp"
-            android:layout_height="95dp"
-            android:layout_marginEnd="28dp"
-            android:layout_marginBottom="112dp"
+            android:layout_width="300dp"
+            android:layout_height="220dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginBottom="468dp"
             android:background="#1B1464"
             android:padding="1dp"
             android:scaleType="fitCenter"
@@ -108,10 +108,10 @@
         <ImageButton
             android:id="@+id/productImageButton"
 
-            android:layout_width="90dp"
-            android:layout_height="95dp"
-            android:layout_marginEnd="16dp"
-            android:layout_marginBottom="112dp"
+            android:layout_width="300dp"
+            android:layout_height="220dp"
+            android:layout_marginEnd="24dp"
+            android:layout_marginBottom="468dp"
             android:background="#1B1464"
             android:onClick="@{()-> viewModel.show()}"
             android:padding="1dp"
@@ -127,7 +127,7 @@
             android:gravity="center"
             android:text="@string/kg"
             android:textColor="#ffffff"
-            android:textSize="18sp"
+            android:textSize="30sp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.0"

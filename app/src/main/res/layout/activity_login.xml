@@ -1,14 +1,15 @@
 <?xml version="1.0" encoding="utf-8"?>
 
-<layout  xmlns:android="http://schemas.android.com/apk/res/android"
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools">
-      <data>
 
-          <variable
-              name="viewModel"
-              type="com.mestiripesage.gesepese.ui.login.LoginViewModel" />
-      </data>
+    <data>
+
+        <variable
+            name="viewModel"
+            type="com.mestiripesage.gesepese.ui.login.LoginViewModel" />
+    </data>
 
 
     <androidx.constraintlayout.widget.ConstraintLayout
@@ -16,9 +17,6 @@
         android:layout_height="match_parent"
         android:background="#1B1464"
         tools:context=".ui.login.LoginActivity">
-        // email
-
-        //password
 
         <Button
             android:id="@+id/button"
