@@ -1,4 +1,4 @@
-package com.mestiripesage.gesepese.data.remote.request
+package com.mestiripesage.gesepese.data.remote.request.user
 
 import com.google.gson.annotations.SerializedName
 import java.io.Serializable

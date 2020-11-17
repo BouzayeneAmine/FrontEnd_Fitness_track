@@ -8,9 +8,9 @@ import com.google.gson.annotations.SerializedName
 
 
 class Product {
-    @SerializedName("orders")
+    @SerializedName("customer")
     @Expose
-    private var orders: List<Any?>? = null
+    private var customers: List<Customer?>? = null
 
     @SerializedName("_id")
     @Expose
@@ -20,13 +20,13 @@ class Product {
     @Expose
     private var name: String? = null
 
-    @SerializedName("quantity")
+    @SerializedName("code")
     @Expose
     private var quantity: String? = null
 
-    @SerializedName("description")
+    @SerializedName("receipt")
     @Expose
-    private var description: String? = null
+    private var receipts: List<Receipt>? = null
 
     @SerializedName("price")
     @Expose
@@ -36,60 +36,6 @@ class Product {
     @Expose
     private var v: Int? = null
 
-    fun getOrders(): List<Any?>? {
-        return orders
-    }
 
-    fun setOrders(orders: List<Any?>?) {
-        this.orders = orders
-    }
-
-    fun getId(): String? {
-        return id
-    }
-
-    fun setId(id: String?) {
-        this.id = id
-    }
-
-    fun getName(): String? {
-        return name
-    }
-
-    fun setName(name: String?) {
-        this.name = name
-    }
-
-    fun getQuantity(): String? {
-        return quantity
-    }
-
-    fun setQuantity(quantity: String?) {
-        this.quantity = quantity
-    }
-
-    fun getDescription(): String? {
-        return description
-    }
-
-    fun setDescription(description: String?) {
-        this.description = description
-    }
-
-    fun getPrice(): String? {
-        return price
-    }
-
-    fun setPrice(price: String?) {
-        this.price = price
-    }
-
-    fun getV(): Int? {
-        return v
-    }
-
-    fun setV(v: Int?) {
-        this.v = v
-    }
 
 }

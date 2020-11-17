@@ -1,11 +1,9 @@
 package com.mestiripesage.gesepese.domain.useCases.product
 
 import com.mestiripesage.gesepese.data.entities.Product
-import com.mestiripesage.gesepese.data.remote.request.ProductAddRequest
+import com.mestiripesage.gesepese.data.remote.request.product.ProductAddRequest
 import com.mestiripesage.gesepese.data.remote.response.Data
-import com.mestiripesage.gesepese.data.repository.AuthRepositoryImp
 import com.mestiripesage.gesepese.data.repository.ProductRepositoryImp
-import com.mestiripesage.gesepese.domain.repository.IAuthRepository
 import com.mestiripesage.gesepese.domain.repository.IProductRepository
 import io.reactivex.Observable
 

@@ -1,7 +1,7 @@
 package com.mestiripesage.gesepese.domain.useCases.auth
 
 import com.mestiripesage.gesepese.data.entities.User
-import com.mestiripesage.gesepese.data.remote.request.RegisterRequest
+import com.mestiripesage.gesepese.data.remote.request.user.RegisterRequest
 import com.mestiripesage.gesepese.data.remote.response.Data
 import com.mestiripesage.gesepese.data.repository.AuthRepositoryImp
 import com.mestiripesage.gesepese.domain.repository.IAuthRepository

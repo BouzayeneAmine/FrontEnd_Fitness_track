@@ -3,7 +3,7 @@ package com.mestiripesage.gesepese.ui.login
 
 import android.util.Log
 import androidx.databinding.ObservableField
-import com.mestiripesage.gesepese.data.remote.request.LoginRequest
+import com.mestiripesage.gesepese.data.remote.request.user.LoginRequest
 import com.mestiripesage.gesepese.domain.useCases.auth.LoginUseCase
 import com.mestiripesage.gesepese.ui.base.BaseViewModel
 import io.paperdb.Paper
@@ -23,7 +23,12 @@ class LoginViewModel : BaseViewModel<LoginNavigator>() {
         Log.v(TAG, "password " + password.get())
 
 
-        useCase.execute(LoginRequest(email.get()!!, password.get()!!)).subscribeOn(
+        useCase.execute(
+            LoginRequest(
+                email.get()!!,
+                password.get()!!
+            )
+        ).subscribeOn(
             Schedulers.io()
         ).observeOn(
             AndroidSchedulers

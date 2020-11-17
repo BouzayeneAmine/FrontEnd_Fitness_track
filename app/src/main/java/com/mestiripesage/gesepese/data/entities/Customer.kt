@@ -4,11 +4,18 @@ import com.google.gson.annotations.Expose
 import com.google.gson.annotations.SerializedName
 
 
-class Subcategory {
-    @SerializedName("products")
+class Customer {
+    @SerializedName("camion")
+    @Expose
+    var camions: List<Camion>? = null
+
+    @SerializedName("product")
     @Expose
     var products: List<Product>? = null
 
+    @SerializedName("receipt")
+    @Expose
+    var receipts: List<Receipt>? = null
     @SerializedName("_id")
     @Expose
     var id: String? = null
@@ -17,13 +24,13 @@ class Subcategory {
     @Expose
     var name: String? = null
 
-    @SerializedName("description")
+    @SerializedName("code")
     @Expose
-    var description: String? = null
+    var code: String? = null
 
-    @SerializedName("category")
+    @SerializedName("adresse")
     @Expose
-    var category: Category? = null
+    var adresse: Receipt? = null
 
     @SerializedName("__v")
     @Expose

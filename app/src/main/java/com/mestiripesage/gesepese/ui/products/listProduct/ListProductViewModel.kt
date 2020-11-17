@@ -1,11 +1,8 @@
 package com.mestiripesage.gesepese.ui.products.listProduct
 
 import android.util.Log
-import androidx.databinding.ObservableField
-import com.mestiripesage.gesepese.data.remote.request.RegisterRequest
 import com.mestiripesage.gesepese.domain.useCases.product.ListProductUseCase
 import com.mestiripesage.gesepese.ui.base.BaseViewModel
-import com.mestiripesage.gesepese.ui.login.LoginNavigator
 import io.reactivex.android.schedulers.AndroidSchedulers
 import io.reactivex.schedulers.Schedulers
 

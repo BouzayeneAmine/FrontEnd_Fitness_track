@@ -2,8 +2,9 @@ package com.mestiripesage.gesepese.ui.products.addProduct
 
 import android.util.Log
 import androidx.databinding.ObservableField
-import com.mestiripesage.gesepese.data.entities.Order
-import com.mestiripesage.gesepese.data.remote.request.ProductAddRequest
+import com.mestiripesage.gesepese.data.entities.Customer
+import com.mestiripesage.gesepese.data.entities.Receipt
+import com.mestiripesage.gesepese.data.remote.request.product.ProductAddRequest
 import com.mestiripesage.gesepese.domain.useCases.product.addProductUseCase
 import io.reactivex.android.schedulers.AndroidSchedulers
 import io.reactivex.schedulers.Schedulers
@@ -13,21 +14,28 @@ class AddProductViewModel {
     private val useCase =
         addProductUseCase()
     private var name = ObservableField<String>()
-    private var quantity = ObservableField<String>()
-    private var description = ObservableField<String>()
+    private var code = ObservableField<String>()
+
     private var price = ObservableField<String>()
-    private var subCategory = ObservableField<String>()
-    private var order = ObservableField<List<Order>>()
+    private var customers = ObservableField<List<Customer>>()
+    private var receipts = ObservableField<List<Receipt>>()
 
     fun add() {
         // getNavigator()?.login(email.get()!!,password.get()!!)
         Log.v(TAG, "name " + name.get())
-        Log.v(TAG, "quantity " + quantity.get())
-        Log.v(TAG, "description " + description.get())
+        Log.v(TAG, "quantity " + code.get())
         Log.v(TAG, "price " + price.get())
 
 
-        useCase.execute(ProductAddRequest(name.get()!!, quantity.get()!! , description.get()!! , price.get()!!,order.get()!!,subCategory.get())).subscribeOn(
+        useCase.execute(
+            ProductAddRequest(
+                name.get()!!,
+                code.get()!!,
+                price.get()!!,
+                customers.get()!!,
+                receipts.get()
+            )
+        ).subscribeOn(
             Schedulers.io()
         ).observeOn(
             AndroidSchedulers
@@ -59,20 +67,18 @@ class AddProductViewModel {
         return name
     }
 
-    fun getQuantity(): ObservableField<String>? {
-        return quantity
+    fun getCode(): ObservableField<String>? {
+        return code
     }
-    fun getDescription(): ObservableField<String>? {
-        return description
-    }
+
     fun getPrice(): ObservableField<String> {
         return price
     }
-    fun getOrders(): ObservableField<List<Order>> {
-        return order
+    fun getCustomers(): ObservableField<List<Customer>> {
+        return customers
     }
-    fun getSubCategory(): ObservableField<String>? {
-        return subCategory
+    fun getReceipt(): ObservableField<List<Receipt>> {
+        return receipts
     }
 
 }

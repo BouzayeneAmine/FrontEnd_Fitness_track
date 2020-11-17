@@ -1,16 +1,13 @@
 package com.mestiripesage.gesepese.data.repository
 
-import com.mestiripesage.gesepese.data.entities.Product
 import com.mestiripesage.gesepese.data.entities.User
 import com.mestiripesage.gesepese.data.remote.RetrofitClient
-import com.mestiripesage.gesepese.data.remote.request.LoginRequest
-import com.mestiripesage.gesepese.data.remote.request.ProductAddRequest
-import com.mestiripesage.gesepese.data.remote.request.RegisterRequest
-import com.mestiripesage.gesepese.data.remote.request.UpdateRequest
+import com.mestiripesage.gesepese.data.remote.request.user.LoginRequest
+import com.mestiripesage.gesepese.data.remote.request.user.RegisterRequest
+import com.mestiripesage.gesepese.data.remote.request.user.UpdateRequest
 import com.mestiripesage.gesepese.data.remote.response.*
 import com.mestiripesage.gesepese.domain.repository.IAuthRepository
 import io.reactivex.Observable
-import retrofit2.Retrofit
 
 class AuthRepositoryImp : IAuthRepository {
     override fun login(loginRequest: LoginRequest): Observable<Data<User>> {

@@ -2,7 +2,7 @@ package com.mestiripesage.gesepese.ui.register
 
 import android.util.Log
 import androidx.databinding.ObservableField
-import com.mestiripesage.gesepese.data.remote.request.RegisterRequest
+import com.mestiripesage.gesepese.data.remote.request.user.RegisterRequest
 import com.mestiripesage.gesepese.domain.useCases.auth.RegisterUseCase
 import com.mestiripesage.gesepese.ui.base.BaseViewModel
 import io.reactivex.android.schedulers.AndroidSchedulers
@@ -29,7 +29,8 @@ class RegisterViewModel : BaseViewModel<RegisterNavigator>() {
                 firstName.get()!!,
                 lastName.get()!!,
                 phone.get()!!
-            )).subscribeOn(
+            )
+        ).subscribeOn(
                 Schedulers.io()
             ).observeOn(
                 AndroidSchedulers
