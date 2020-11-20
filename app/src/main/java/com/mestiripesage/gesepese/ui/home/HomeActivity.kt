@@ -8,6 +8,7 @@ import com.mestiripesage.gesepese.R
 import com.mestiripesage.gesepese.databinding.ActivityHomeBinding
 import com.mestiripesage.gesepese.databinding.ActivityLoginBinding
 import com.mestiripesage.gesepese.ui.base.BaseActivity
+import com.mestiripesage.gesepese.ui.camion.addCamion.AddCamionActivity
 import com.mestiripesage.gesepese.ui.forget.ForgetPasswordActivity
 import com.mestiripesage.gesepese.ui.home.HomeActivity
 import com.mestiripesage.gesepese.ui.products.listProduct.ListProductActivity
@@ -59,6 +60,10 @@ else {
 
     override fun navigateToListeProduct() {
         startActivity(Intent(this,ListProductActivity::class.java))
+    }
+
+    override fun navigateToCamion() {
+       startActivity(Intent(this,AddCamionActivity::class.java))
     }
 
 

@@ -27,5 +27,14 @@
     <string name="client">CUSTOMER </string>
     <string name="produit">PRODUCT </string>
     <string name="kg">Kg </string>
+    <string name="add_camion">ADD TRUCK</string>
+    <string name="immatricule">Immatricule</string>
+    <string name="code">Code</string>
+    <string name="tare_camion">Tare</string>
+    <string name="customer">Customer</string>
+    <string name="add_customer">ADD CUSTOMER</string>
+    <string name="name">Name</string>
+    <string name="adresse">Address</string>
+
 
 </resources>

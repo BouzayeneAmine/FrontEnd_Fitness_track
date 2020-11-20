@@ -44,23 +44,6 @@
             app:layout_constraintVertical_bias="0.256" />
 
         <EditText
-            android:id="@+id/editTextTextMultiLine3"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:ems="10"
-            android:gravity="start|top"
-            android:hint="@string/productDescription"
-            android:text="@={viewModel.description}"
-
-            android:inputType="textMultiLine"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.504"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.549" />
-
-        <EditText
             android:id="@+id/editTextTextMultiLine4"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -84,7 +67,7 @@
             android:ems="10"
             android:gravity="start|top"
             android:hint="@string/productQuantity"
-            android:text="@={viewModel.quantity}"
+            android:text="@={viewModel.code}"
 
             android:inputType="textMultiLine"
             app:layout_constraintBottom_toBottomOf="parent"

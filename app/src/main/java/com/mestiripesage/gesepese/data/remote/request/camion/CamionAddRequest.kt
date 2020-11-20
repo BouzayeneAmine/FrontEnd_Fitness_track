@@ -9,7 +9,7 @@ class CamionAddRequest(
     @SerializedName("immatricule") var immatricule: String,
     @SerializedName("code") var code: String,
     @SerializedName("tare") var tare: String,
-    @SerializedName("customers") var customers: List<Customer>,
+    @SerializedName("customers") var customers:String,
     @SerializedName("Receipt") var receipts: List<Receipt>
 
 ) : Serializable

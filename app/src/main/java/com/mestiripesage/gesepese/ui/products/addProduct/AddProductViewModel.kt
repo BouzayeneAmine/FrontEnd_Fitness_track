@@ -5,14 +5,15 @@ import androidx.databinding.ObservableField
 import com.mestiripesage.gesepese.data.entities.Customer
 import com.mestiripesage.gesepese.data.entities.Receipt
 import com.mestiripesage.gesepese.data.remote.request.product.ProductAddRequest
-import com.mestiripesage.gesepese.domain.useCases.product.addProductUseCase
+import com.mestiripesage.gesepese.domain.useCases.product.AddProductUseCase
+import com.mestiripesage.gesepese.ui.base.BaseViewModel
 import io.reactivex.android.schedulers.AndroidSchedulers
 import io.reactivex.schedulers.Schedulers
 
-class AddProductViewModel {
+class AddProductViewModel:BaseViewModel<AddProductNavigator>() {
     private val TAG = "AddProductViewModel"
     private val useCase =
-        addProductUseCase()
+        AddProductUseCase()
     private var name = ObservableField<String>()
     private var code = ObservableField<String>()
 
@@ -47,16 +48,16 @@ class AddProductViewModel {
 
     }
 
-    private fun handleResult(result: addProductUseCase.Result) {
+    private fun handleResult(result: AddProductUseCase.Result) {
 //        progressVisible.set(result == LoginUseCase.Result.Loading)
         //getNavigator()!!.showProgress()
         when (result) {
-            is addProductUseCase.Result.Success -> {
+            is AddProductUseCase.Result.Success -> {
 
                 Log.e(TAG, result.userResponse.toString())
 
             }
-            is addProductUseCase.Result.Failure -> {
+            is AddProductUseCase.Result.Failure -> {
 
                 Log.d("ERROR", "" + result.throwable.message)
             }

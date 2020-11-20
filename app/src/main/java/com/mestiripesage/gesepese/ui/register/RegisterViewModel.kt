@@ -20,7 +20,10 @@ class RegisterViewModel : BaseViewModel<RegisterNavigator>() {
 
     fun register() {
 
-        Log.v("data from register ","email"+  email.get()!! + "password"+password.get()!! +"firstName"+firstName.get()!! + "lastName"+lastName.get()!! +"phone"+phone.get()!!)
+        Log.v(
+            "data from register ",
+            "email" + email.get()!! + "password" + password.get()!! + "firstName" + firstName.get()!! + "lastName" + lastName.get()!! + "phone" + phone.get()!!
+        )
         // getNavigator()?.register(email.get()!!,password.get()!!,firstName.get()!!,lastName.get()!!,phone.get()!!)
         useCase.execute(
             RegisterRequest(
@@ -31,14 +34,14 @@ class RegisterViewModel : BaseViewModel<RegisterNavigator>() {
                 phone.get()!!
             )
         ).subscribeOn(
-                Schedulers.io()
-            ).observeOn(
-                AndroidSchedulers
-                    .mainThread()
-            )
-                .subscribe {
-                    handleResult(it)
-                }
+            Schedulers.io()
+        ).observeOn(
+            AndroidSchedulers
+                .mainThread()
+        )
+            .subscribe {
+                handleResult(it)
+            }
 
     }
 

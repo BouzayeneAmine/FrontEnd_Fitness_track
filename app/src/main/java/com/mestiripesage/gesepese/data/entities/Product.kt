@@ -5,12 +5,14 @@ import com.google.gson.annotations.Expose
 import com.google.gson.annotations.SerializedName
 
 
-
-
 class Product {
     @SerializedName("customer")
     @Expose
-    private var customers: List<Customer?>? = null
+    private var customers: List<Customer>? = null
+
+    @SerializedName("receipt")
+    @Expose
+    private var receipts: List<Receipt>? = null
 
     @SerializedName("_id")
     @Expose
@@ -24,9 +26,6 @@ class Product {
     @Expose
     private var quantity: String? = null
 
-    @SerializedName("receipt")
-    @Expose
-    private var receipts: List<Receipt>? = null
 
     @SerializedName("price")
     @Expose
@@ -35,7 +34,6 @@ class Product {
     @SerializedName("__v")
     @Expose
     private var v: Int? = null
-
 
 
 }

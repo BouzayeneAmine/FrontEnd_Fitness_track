@@ -11,8 +11,8 @@
     </data>
 
     <androidx.constraintlayout.widget.ConstraintLayout
-        android:layout_width="369dp"
-        android:layout_height="552dp"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
         android:background="#1B1464"
         tools:context=".ui.home.HomeActivity">
 

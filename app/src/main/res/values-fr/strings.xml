@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="app_name">GesePese</string>
-    <string name="signin">Inscription</string>
-    <string name="loading">Chargement</string>
+    <string name="signin">CONNEXION</string>
+    <string name="loading">GESEPESE</string>
     <string name="forgot">mot de passe oublieé</string>
     <string name="email">email</string>
     <string name="password">password</string>
     <string name="FirstName">Prénom</string>
     <string name="LastName">Nom</string>
-    <string name="register">Registrer</string>
+    <string name="register">INSCRIRE</string>
     <string name="phone">Téléphone</string>
     <string name="sent">envoyer</string>
     <string name="Product">produit</string>
@@ -28,7 +28,14 @@
     <string name="client">CLIENT </string>
     <string name="produit">PRODUIT </string>
     <string name="kg">Kg </string>
-
+    <string name="add_camion">AJOUTER UN CAMION</string>
+    <string name="immatricule">Immatricule</string>
+    <string name="code">Code</string>
+    <string name="tare_camion">Tare</string>
+    <string name="customer">Client</string>
+    <string name="add_customer">AJOUTER UN CLIENT</string>
+    <string name="name">Nom</string>
+    <string name="adresse">Adresse</string>
 
 
 </resources>

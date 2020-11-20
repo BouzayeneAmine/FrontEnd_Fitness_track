@@ -4,5 +4,6 @@ interface HomeNavigator {
 
     fun  tare( )
     fun navigateToListeProduct()
+    fun navigateToCamion()
 
 }
