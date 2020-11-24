@@ -18,7 +18,7 @@ class LoginActivity : BaseActivity<ActivityLoginBinding>(),LoginNavigator {
 
     override fun setViewModel() {
         model = run {
-            ViewModelProviders.of(this!!).get(LoginViewModel::class.java)
+            ViewModelProviders.of(this).get(LoginViewModel::class.java)
         }
     }
 
@@ -27,9 +27,6 @@ class LoginActivity : BaseActivity<ActivityLoginBinding>(),LoginNavigator {
         model.setNavigator(this)
 
         getDataBanding()?.viewModel =model
-
-        ///getDataBinding()?.toolBar?.setN
-
     }
 
     override fun getLayoutId(): Int {

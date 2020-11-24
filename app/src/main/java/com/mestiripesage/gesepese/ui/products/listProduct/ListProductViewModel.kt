@@ -38,7 +38,7 @@ class ListProductViewModel  : BaseViewModel<ListProductNavigator>() {
         when (result) {
             is ListProductUseCase.Result.Success -> {
 
-                Log.e(TAG, result.userResponse.toString())
+                Log.e(TAG, result.userResponse.data.toString())
 
             }
             is ListProductUseCase.Result.Failure -> {

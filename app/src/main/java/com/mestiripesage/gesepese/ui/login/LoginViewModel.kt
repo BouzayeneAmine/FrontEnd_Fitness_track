@@ -3,6 +3,7 @@ package com.mestiripesage.gesepese.ui.login
 
 import android.util.Log
 import androidx.databinding.ObservableField
+import com.mestiripesage.gesepese.data.remote.ApiGesepese
 import com.mestiripesage.gesepese.data.remote.request.user.LoginRequest
 import com.mestiripesage.gesepese.domain.useCases.auth.LoginUseCase
 import com.mestiripesage.gesepese.ui.base.BaseViewModel
@@ -47,9 +48,10 @@ class LoginViewModel : BaseViewModel<LoginNavigator>() {
         when (result) {
             is LoginUseCase.Result.Success -> {
 
-                Log.e(TAG, ""+result.userResponse.message)
+                Log.e(TAG, "" + result.userResponse.data.toString())
 
-                Paper.book().write("user",result.userResponse);
+                Paper.book().write("userLogin", result.userResponse.data)
+                Paper.book().write("token", result.userResponse.data?.accesstoken!!)
 
                 getNavigator()?.navigateToHome()
             }
@@ -71,18 +73,18 @@ class LoginViewModel : BaseViewModel<LoginNavigator>() {
     fun navigateToRegister() {
 
 
-        getNavigator()?.navigateToRegister();
+        getNavigator()?.navigateToRegister()
     }
     fun navigateToForget() {
 
 
-        getNavigator()?.navigateToForget();
+        getNavigator()?.navigateToForget()
     }
 
     fun navigateToHome() {
 
 
-        getNavigator()?.navigateToHome();
+        getNavigator()?.navigateToHome()
     }
 
 }

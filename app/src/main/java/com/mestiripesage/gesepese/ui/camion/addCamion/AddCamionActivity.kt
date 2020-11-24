@@ -5,6 +5,7 @@ import android.util.Log
 import android.widget.ArrayAdapter
 import androidx.lifecycle.ViewModelProviders
 import com.mestiripesage.gesepese.R
+import com.mestiripesage.gesepese.data.entities.Product
 import com.mestiripesage.gesepese.data.entities.Receipt
 import com.mestiripesage.gesepese.databinding.ActivityAddCamionBinding
 
@@ -21,7 +22,7 @@ class AddCamionActivity : BaseActivity<ActivityAddCamionBinding>(),AddCamionNavi
 
     override fun setViewModel() {
         model = run {
-            ViewModelProviders.of(this!!).get(CamionViewModel::class.java)
+            ViewModelProviders.of(this).get(CamionViewModel::class.java)
         }
     }
 
@@ -30,8 +31,7 @@ class AddCamionActivity : BaseActivity<ActivityAddCamionBinding>(),AddCamionNavi
         model.setNavigator(this)
         getDataBanding()?.viewModel =model
         val list : MutableList<String> =ArrayList()
-        for (i:Int in 1..1040)
-            list.add(("Item $i"))
+        model.getAllCustomer()
 
     val adapter = ArrayAdapter(this,R.layout.support_simple_spinner_dropdown_item,list)
         spinnerCamion.adapter=adapter
@@ -45,9 +45,18 @@ class AddCamionActivity : BaseActivity<ActivityAddCamionBinding>(),AddCamionNavi
         immatricule: String,
         code: String,
         tare: String,
-        customer: String,
-        reciepts: List<Receipt>
+        customer: String
+
     ) {
-        Log.v("add data","immatricule"+immatricule+"code"+code+"tare"+tare+"customer"+customer+"reciept"+reciepts)
+        Log.v(
+            "add data",
+            "immatricule" + immatricule + "code" + code + "tare" + tare + "customer" + customer
+        )
+    }
+
+    override fun setValueSpinner(customers: MutableList<String>) {
+        val adapter = ArrayAdapter(this, R.layout.support_simple_spinner_dropdown_item, customers)
+        spinnerCamion.adapter = adapter
+
     }
 }

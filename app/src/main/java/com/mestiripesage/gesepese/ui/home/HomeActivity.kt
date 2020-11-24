@@ -9,6 +9,7 @@ import com.mestiripesage.gesepese.databinding.ActivityHomeBinding
 import com.mestiripesage.gesepese.databinding.ActivityLoginBinding
 import com.mestiripesage.gesepese.ui.base.BaseActivity
 import com.mestiripesage.gesepese.ui.camion.addCamion.AddCamionActivity
+import com.mestiripesage.gesepese.ui.customer.AddCustomerActivity
 import com.mestiripesage.gesepese.ui.forget.ForgetPasswordActivity
 import com.mestiripesage.gesepese.ui.home.HomeActivity
 import com.mestiripesage.gesepese.ui.products.listProduct.ListProductActivity
@@ -17,12 +18,12 @@ import com.mestiripesage.gesepese.ui.register.RegisterActivity
 class HomeActivity : BaseActivity<ActivityHomeBinding>(), HomeNavigator {
     lateinit var model: HomeViewModel
     var testTare: Boolean = true
-    var tare: Double = 0.0;
-    var wheight:Double=0.0;
+    var tare: Double = 0.0
+    var wheight: Double = 0.0
 
     override fun setViewModel() {
         model = run {
-            ViewModelProviders.of(this!!).get(HomeViewModel::class.java)
+            ViewModelProviders.of(this).get(HomeViewModel::class.java)
         }
     }
 
@@ -31,7 +32,7 @@ class HomeActivity : BaseActivity<ActivityHomeBinding>(), HomeNavigator {
 
         getDataBanding()?.viewModel = model
         getDataBanding()!!.zeroImageButton.setOnClickListener(View.OnClickListener {
-            getDataBanding()!!.wheighInput.setText("0")
+            getDataBanding()!!.wheighInput.text = "0"
 
         })
     }
@@ -44,14 +45,14 @@ class HomeActivity : BaseActivity<ActivityHomeBinding>(), HomeNavigator {
     override fun tare() {
 
 
-if (tare.equals("0.0")){
-    tare =getDataBanding()!!.wheighInput.text.toString().toDouble();
-    getDataBanding()!!.wheighInput.setText("0")
+if (tare.equals("0.0")) {
+    tare = getDataBanding()!!.wheighInput.text.toString().toDouble()
+    getDataBanding()!!.wheighInput.text = "0"
 }
 else {
-    wheight = getDataBanding()!!.wheighInput.toString().toDouble();
-    wheight=wheight+tare;
-    getDataBanding()!!.wheighInput.setText(wheight.toString())
+    wheight = getDataBanding()!!.wheighInput.toString().toDouble()
+    wheight = wheight + tare
+    getDataBanding()!!.wheighInput.text = wheight.toString()
 
 }
 
@@ -59,11 +60,15 @@ else {
     }
 
     override fun navigateToListeProduct() {
-        startActivity(Intent(this,ListProductActivity::class.java))
+        startActivity(Intent(this, ListProductActivity::class.java))
     }
 
     override fun navigateToCamion() {
-       startActivity(Intent(this,AddCamionActivity::class.java))
+        startActivity(Intent(this, AddCamionActivity::class.java))
+    }
+
+    override fun navigateToCustomer() {
+        startActivity(Intent(this, AddCustomerActivity::class.java))
     }
 
 

@@ -19,105 +19,128 @@
 
         <TextView
             android:id="@+id/wheighInput"
-            android:layout_width="262dp"
+            android:layout_width="wrap_content"
             android:layout_height="99dp"
             android:gravity="center"
-            android:text="0.000 "
+            android:text="0.000"
             android:textColor="#ffffff"
             android:textSize="70sp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.455"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.126" />
+            app:layout_constraintVertical_bias="0.098" />
 
         <ImageButton
             android:id="@+id/zeroImageButton"
             android:layout_width="90dp"
             android:layout_height="95dp"
+            android:layout_marginStart="24dp"
             android:layout_weight="1"
             android:adjustViewBounds="true"
             android:background="#1B1464"
             android:padding="1dp"
             android:scaleType="fitCenter"
-            app:layout_constraintBottom_toTopOf="@+id/showImageButton"
-            app:layout_constraintEnd_toStartOf="@+id/tareImageButton"
-            app:layout_constraintHorizontal_bias="0.322"
+            app:layout_constraintBottom_toTopOf="@+id/imageButton2"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/wheighInput"
-            app:layout_constraintVertical_bias="0.504"
+            app:layout_constraintVertical_bias="0.41000003"
             app:srcCompat="@mipmap/ic_zero" />
 
         <ImageButton
             android:id="@+id/tareImageButton"
             android:layout_width="90dp"
             android:layout_height="95dp"
-            android:layout_marginEnd="48dp"
+            android:layout_marginStart="48dp"
             android:background="#1B1464"
             android:onClick="@{()-> viewModel.tare()}"
             android:padding="1dp"
             android:scaleType="fitCenter"
             app:layout_constraintBottom_toTopOf="@+id/clientImageButton"
-            app:layout_constraintEnd_toStartOf="@+id/saveImageButton"
+            app:layout_constraintStart_toEndOf="@+id/zeroImageButton"
             app:layout_constraintTop_toBottomOf="@+id/wheighInput"
-            app:layout_constraintVertical_bias="0.504"
+            app:layout_constraintVertical_bias="0.414"
             app:srcCompat="@mipmap/ic_tarescale" />
 
         <ImageButton
             android:id="@+id/saveImageButton"
             android:layout_width="90dp"
             android:layout_height="95dp"
-            android:layout_marginEnd="20dp"
+            android:layout_marginEnd="24dp"
             android:background="#1B1464"
             android:padding="1dp"
             android:scaleType="fitCenter"
             app:layout_constraintBottom_toTopOf="@+id/productImageButton"
             app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.688"
+            app:layout_constraintStart_toEndOf="@+id/tareImageButton"
             app:layout_constraintTop_toBottomOf="@+id/wheighInput"
-            app:layout_constraintVertical_bias="0.504"
+            app:layout_constraintVertical_bias="0.414"
             app:srcCompat="@mipmap/ic_save" />
 
         <ImageButton
             android:id="@+id/showImageButton"
             android:layout_width="90dp"
             android:layout_height="95dp"
-            android:layout_marginBottom="112dp"
             android:background="#1B1464"
 
             android:padding="1dp"
             android:scaleType="fitCenter"
             app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toStartOf="@+id/clientImageButton"
-            app:layout_constraintHorizontal_bias="0.313"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.498"
             app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.91"
             app:srcCompat="@mipmap/ic_show" />
 
         <ImageButton
             android:id="@+id/clientImageButton"
             android:layout_width="90dp"
             android:layout_height="95dp"
-            android:layout_marginEnd="52dp"
-            android:layout_marginBottom="112dp"
+            android:layout_marginBottom="204dp"
             android:background="#1B1464"
+            android:onClick="@{()-> viewModel.customers()}"
             android:padding="1dp"
             android:scaleType="fitCenter"
             app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toStartOf="@+id/productImageButton"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.222"
+            app:layout_constraintStart_toEndOf="@+id/zeroImageButton"
             app:srcCompat="@mipmap/ic_customers" />
+
+        <ImageButton
+            android:id="@+id/imageButton2"
+            android:layout_width="90dp"
+            android:layout_height="95dp"
+            android:layout_marginStart="24dp"
+            android:layout_marginBottom="204dp"
+            android:background="#1B1464"
+            android:onClick="@{()-> viewModel.camion()}"
+            android:padding="1dp"
+            android:scaleType="fitCenter"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/clientImageButton"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:srcCompat="@mipmap/ic_camion" />
 
         <ImageButton
             android:id="@+id/productImageButton"
 
             android:layout_width="90dp"
             android:layout_height="95dp"
-            android:layout_marginEnd="16dp"
-            android:layout_marginBottom="112dp"
+            android:layout_marginEnd="24dp"
+            android:layout_marginBottom="204dp"
             android:background="#1B1464"
             android:onClick="@{()-> viewModel.show()}"
             android:padding="1dp"
             android:scaleType="fitCenter"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.688"
+            app:layout_constraintStart_toEndOf="@+id/tareImageButton"
             app:srcCompat="@mipmap/ic_products" />
 
         <TextView

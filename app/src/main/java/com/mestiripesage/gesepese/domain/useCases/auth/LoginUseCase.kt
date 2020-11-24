@@ -1,6 +1,7 @@
 package com.mestiripesage.gesepese.domain.useCases.auth
 
 import com.mestiripesage.gesepese.data.entities.User
+import com.mestiripesage.gesepese.data.entities.UserLogin
 import com.mestiripesage.gesepese.data.remote.request.user.LoginRequest
 import com.mestiripesage.gesepese.data.remote.response.Data
 import com.mestiripesage.gesepese.data.repository.AuthRepositoryImp
@@ -11,9 +12,10 @@ class LoginUseCase {
     private  val authRepository : IAuthRepository = AuthRepositoryImp()
     sealed class Result {
         object  Loading : Result()
-        data class Success (val userResponse: Data<User> ) :
+        data class Success(val userResponse: Data<UserLogin>) :
             Result()
-        data class Failure (val throwable: Throwable) : Result()
+
+        data class Failure(val throwable: Throwable) : Result()
 
     }
     fun execute(loginRequest: LoginRequest):Observable<Result> {

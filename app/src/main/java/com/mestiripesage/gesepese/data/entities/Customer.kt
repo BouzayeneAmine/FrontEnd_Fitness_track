@@ -9,13 +9,7 @@ class Customer {
     @Expose
     var camions: List<Camion>? = null
 
-    @SerializedName("product")
-    @Expose
-    var products: List<Product>? = null
 
-    @SerializedName("receipt")
-    @Expose
-    var receipts: List<Receipt>? = null
     @SerializedName("_id")
     @Expose
     var id: String? = null
@@ -30,7 +24,7 @@ class Customer {
 
     @SerializedName("adresse")
     @Expose
-    var adresse: Receipt? = null
+    var adresse: String? = null
 
     @SerializedName("__v")
     @Expose

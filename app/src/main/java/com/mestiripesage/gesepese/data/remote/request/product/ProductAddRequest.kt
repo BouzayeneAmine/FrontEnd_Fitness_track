@@ -10,7 +10,7 @@ class ProductAddRequest(
     @SerializedName(value = "name") var name: String,
     @SerializedName(value = "code") var code: String,
     @SerializedName(value = "price") var price: String,
-    @SerializedName(value = "customers") var customers: List<Customer>? ,
-    @SerializedName(value = "receipts") var receipts: List<Receipt>?
+    @SerializedName(value = "customers") var customers: List<Customer>?
+
 
 ) : Serializable

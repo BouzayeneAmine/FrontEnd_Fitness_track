@@ -1,6 +1,7 @@
 package com.mestiripesage.gesepese.data.repository
 
 import com.mestiripesage.gesepese.data.entities.User
+import com.mestiripesage.gesepese.data.entities.UserLogin
 import com.mestiripesage.gesepese.data.remote.RetrofitClient
 import com.mestiripesage.gesepese.data.remote.request.user.LoginRequest
 import com.mestiripesage.gesepese.data.remote.request.user.RegisterRequest
@@ -10,7 +11,7 @@ import com.mestiripesage.gesepese.domain.repository.IAuthRepository
 import io.reactivex.Observable
 
 class AuthRepositoryImp : IAuthRepository {
-    override fun login(loginRequest: LoginRequest): Observable<Data<User>> {
+    override fun login(loginRequest: LoginRequest): Observable<Data<UserLogin>> {
         return RetrofitClient.build().login((loginRequest))
     }
 

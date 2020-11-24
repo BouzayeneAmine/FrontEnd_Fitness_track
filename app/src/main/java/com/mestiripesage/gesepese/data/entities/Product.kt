@@ -20,7 +20,7 @@ class Product {
 
     @SerializedName("name")
     @Expose
-    private var name: String? = null
+    var name: String? = null
 
     @SerializedName("code")
     @Expose
