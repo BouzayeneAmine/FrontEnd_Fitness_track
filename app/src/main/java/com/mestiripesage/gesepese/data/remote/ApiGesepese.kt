@@ -3,7 +3,8 @@ package com.mestiripesage.gesepese.data.remote
 class ApiGesepese {
 
     companion object{
-        const val Base_URL ="http://192.168.1.16:3000"
+        const val Base_URL = "http://192.168.1.11:3000"
+
         // User
         const val LOGIN_USER = "/users/login"
         const val REGISTER_USER ="/users/register"
@@ -19,15 +20,20 @@ class ApiGesepese {
         const val ALL_CAMION ="/camions/all"
         const val REMOVE_CAMION ="/camions/remove/{id}"
         const val UPDATE_CAMION ="/camions/update"
+
         // Customers
         const val ADD_CUSTOMER = "/customers/add"
-        const val ALL_CUSTOMER ="/customers/all"
-        const val REMOVE_CUSTOMER ="/customers/remove/{id}"
-        const val UPDATE_CUSTOMER ="/customers/update"
+        const val ALL_CUSTOMER = "/customers/all"
+        const val REMOVE_CUSTOMER = "/customers/remove/{id}"
+        const val UPDATE_CUSTOMER = "/customers/update"
+
         // Reciept
         const val ADD_RECIEPT = "/reciepts/add"
-        const val ALL_RECIEPT="/reciepts/all"
-        const val REMOVE_RECIEPT ="/reciept/remove/{id}"
-        const val UPDATE_RECIEPT ="/reciept/update"
+        const val ALL_RECIEPT = "/reciepts/all"
+        const val REMOVE_RECIEPT = "/reciept/remove/{id}"
+        const val UPDATE_RECIEPT = "/reciept/update"
+        const val token = ""
+
+
     }
 }

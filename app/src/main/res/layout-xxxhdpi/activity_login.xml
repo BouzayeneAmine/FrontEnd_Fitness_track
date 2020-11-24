@@ -45,6 +45,7 @@
 
             android:inputType="textEmailAddress"
             android:text="@={viewModel.email}"
+            android:textColor="#ffffff"
             android:textColorHint="#f5f6fa"
             android:textSize="18sp"
             app:layout_constraintBottom_toTopOf="@+id/editTextTextPassword"
@@ -92,6 +93,7 @@
             android:hint="@string/password"
             android:inputType="textPassword"
             android:text="@={viewModel.password}"
+            android:textColor="#ffffff"
             android:textColorHint="#f5f6fa"
             android:textSize="18sp"
             app:layout_constraintBottom_toTopOf="@+id/button"

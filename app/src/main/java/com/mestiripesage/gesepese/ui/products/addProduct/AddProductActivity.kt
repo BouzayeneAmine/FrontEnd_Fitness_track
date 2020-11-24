@@ -16,7 +16,7 @@ class AddProductActivity  : BaseActivity<ActivityAddProductBinding>(),AddProduct
 
     override fun setViewModel() {
         model = run {
-            ViewModelProviders.of(this!!).get(AddProductViewModel::class.java)
+            ViewModelProviders.of(this).get(AddProductViewModel::class.java)
         }
     }
 
@@ -24,6 +24,7 @@ class AddProductActivity  : BaseActivity<ActivityAddProductBinding>(),AddProduct
         model.setNavigator(this)
 
         getDataBanding()?.viewModel =model
+        getAllCustomer()
     }
 
     override fun getLayoutId(): Int {
@@ -37,6 +38,13 @@ class AddProductActivity  : BaseActivity<ActivityAddProductBinding>(),AddProduct
         customers: List<Customer>,
         receipts: List<Receipt>
     ) {
-        Log.v("add customer","name"+name+"code"+code+"price"+price+"customers"+customers+"reciept"+receipts)
+        Log.v(
+            "add customer",
+            "name" + name + "code" + code + "price" + price + "customers" + customers + "reciept" + receipts
+        )
+    }
+
+    override fun getAllCustomer() {
+
     }
 }

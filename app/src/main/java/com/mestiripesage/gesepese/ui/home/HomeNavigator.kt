@@ -2,8 +2,9 @@ package com.mestiripesage.gesepese.ui.home
 
 interface HomeNavigator {
 
-    fun  tare( )
+    fun tare()
     fun navigateToListeProduct()
     fun navigateToCamion()
+    fun navigateToCustomer()
 
 }

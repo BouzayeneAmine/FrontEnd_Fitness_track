@@ -13,13 +13,14 @@ import com.mestiripesage.gesepese.data.remote.request.user.RegisterRequest
 import com.mestiripesage.gesepese.data.remote.request.user.UpdateRequest
 import com.mestiripesage.gesepese.data.remote.response.*
 import com.mestiripesage.gesepese.data.remote.response.Data
+import io.paperdb.Paper
 import io.reactivex.Observable
 import retrofit2.http.*
 
 interface GesepeseApi {
     /// ws users
     @POST(ApiGesepese.LOGIN_USER)
-    fun login(@Body loginRequest: LoginRequest): Observable<Data<User>>
+    fun login(@Body loginRequest: LoginRequest): Observable<Data<UserLogin>>
 
     @POST(ApiGesepese.REGISTER_USER)
     fun register(@Body registerRequest: RegisterRequest): Observable<Data<User>>
@@ -34,7 +35,8 @@ interface GesepeseApi {
     @POST(ApiGesepese.ADD_PRODUCT)
     fun addProduct(@Body productAddRequest: ProductAddRequest): Observable<Data<Product>>
 
-    @POST(ApiGesepese.ALL_PRODUCT)
+    @Headers("Authorization: ${ApiGesepese.token}")
+    @GET(ApiGesepese.ALL_PRODUCT)
     fun selectAllProduct(): Observable<Data<List<Product>>>
 
     @DELETE(ApiGesepese.REMOVE_PRODUCT)
@@ -50,7 +52,7 @@ interface GesepeseApi {
     @POST(ApiGesepese.ADD_CAMION)
     fun addCamion(@Body camionAddRequest: CamionAddRequest): Observable<Data<Camion>>
 
-    @POST(ApiGesepese.ALL_CAMION)
+    @GET(ApiGesepese.ALL_CAMION)
     fun selectAllCamion(): Observable<Data<List<Camion>>>
 
     @DELETE(ApiGesepese.REMOVE_CAMION)
@@ -66,7 +68,7 @@ interface GesepeseApi {
     @POST(ApiGesepese.ADD_CUSTOMER)
     fun addCustomer(@Body customerAddRequest: CustomerAddRequest): Observable<Data<Customer>>
 
-    @POST(ApiGesepese.ALL_CUSTOMER)
+    @GET(ApiGesepese.ALL_CUSTOMER)
     fun selectAllCustomer(): Observable<Data<List<Customer>>>
 
     @DELETE(ApiGesepese.REMOVE_CUSTOMER)
@@ -82,7 +84,7 @@ interface GesepeseApi {
     @POST(ApiGesepese.ADD_RECIEPT)
     fun addReciept(@Body recieptAddRequest: RecieptAddRequest): Observable<Data<Receipt>>
 
-    @POST(ApiGesepese.ALL_RECIEPT)
+    @GET(ApiGesepese.ALL_RECIEPT)
     fun selectAllReciept(): Observable<Data<List<Receipt>>>
 
     @DELETE(ApiGesepese.REMOVE_RECIEPT)

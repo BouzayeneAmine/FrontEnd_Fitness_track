@@ -19,7 +19,7 @@ class AddProductViewModel:BaseViewModel<AddProductNavigator>() {
 
     private var price = ObservableField<String>()
     private var customers = ObservableField<List<Customer>>()
-    private var receipts = ObservableField<List<Receipt>>()
+
 
     fun add() {
         // getNavigator()?.login(email.get()!!,password.get()!!)
@@ -33,8 +33,8 @@ class AddProductViewModel:BaseViewModel<AddProductNavigator>() {
                 name.get()!!,
                 code.get()!!,
                 price.get()!!,
-                customers.get()!!,
-                receipts.get()
+                customers.get()!!
+
             )
         ).subscribeOn(
             Schedulers.io()
@@ -78,8 +78,6 @@ class AddProductViewModel:BaseViewModel<AddProductNavigator>() {
     fun getCustomers(): ObservableField<List<Customer>> {
         return customers
     }
-    fun getReceipt(): ObservableField<List<Receipt>> {
-        return receipts
-    }
+
 
 }
