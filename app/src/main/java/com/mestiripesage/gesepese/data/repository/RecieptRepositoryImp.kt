@@ -2,7 +2,7 @@ package com.mestiripesage.gesepese.data.repository
 
 import com.mestiripesage.gesepese.data.entities.Receipt
 import com.mestiripesage.gesepese.data.remote.RetrofitClient
-import com.mestiripesage.gesepese.data.remote.request.receipt.RecieptAddRequest
+import com.mestiripesage.gesepese.data.remote.request.reciept.RecieptAddRequest
 import com.mestiripesage.gesepese.data.remote.response.Data
 import com.mestiripesage.gesepese.domain.repository.IRecieptRespository
 import io.reactivex.Observable

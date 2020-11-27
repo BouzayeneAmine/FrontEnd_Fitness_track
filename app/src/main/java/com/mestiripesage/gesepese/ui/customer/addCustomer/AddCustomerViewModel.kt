@@ -1,4 +1,4 @@
-package com.mestiripesage.gesepese.ui.customer
+package com.mestiripesage.gesepese.ui.customer.addCustomer
 
 import android.util.Log
 import androidx.databinding.ObservableField
@@ -8,6 +8,7 @@ import com.mestiripesage.gesepese.data.entities.Receipt
 import com.mestiripesage.gesepese.data.remote.request.customer.CustomerAddRequest
 import com.mestiripesage.gesepese.domain.useCases.customer.CustomerUseCase
 import com.mestiripesage.gesepese.ui.base.BaseViewModel
+import com.mestiripesage.gesepese.ui.customer.addCustomer.AddCustomerNavigator
 import io.paperdb.Paper
 import io.reactivex.android.schedulers.AndroidSchedulers
 import io.reactivex.schedulers.Schedulers

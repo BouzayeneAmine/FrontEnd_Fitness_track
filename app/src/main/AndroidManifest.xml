@@ -13,8 +13,10 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
         android:usesCleartextTraffic="true">
-        <activity android:name=".ui.receipt.RecieptActivity"></activity>
-        <activity android:name=".ui.customer.AddCustomerActivity" />
+        <activity android:name=".ui.customer.listCustomer.ListCustomerActivity"></activity>
+        <activity android:name=".ui.camion.listCamion.ListCamionActivity" />
+        <activity android:name=".ui.receipt.RecieptActivity" />
+        <activity android:name=".ui.customer.addCustomer.AddCustomerActivity" />
         <activity android:name=".ui.camion.addCamion.AddCamionActivity" />
         <activity android:name=".ui.products.listProduct.ListProductActivity" />
         <activity android:name=".ui.login.LoginActivity" />

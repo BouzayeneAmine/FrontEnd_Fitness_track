@@ -1,17 +1,19 @@
 package com.mestiripesage.gesepese.ui.products.listProduct
 
 import android.util.Log
+import com.mestiripesage.gesepese.data.entities.Product
 import com.mestiripesage.gesepese.domain.useCases.product.ListProductUseCase
+import com.mestiripesage.gesepese.ui.adapter.adapter
 import com.mestiripesage.gesepese.ui.base.BaseViewModel
 import io.reactivex.android.schedulers.AndroidSchedulers
 import io.reactivex.schedulers.Schedulers
 
 class ListProductViewModel  : BaseViewModel<ListProductNavigator>() {
+    val products = showProduct()
 
     private var TAG = "ListProductViewModel"
     private var useCase =
         ListProductUseCase()
-
 
 
     fun showProduct() {
@@ -28,6 +30,7 @@ class ListProductViewModel  : BaseViewModel<ListProductNavigator>() {
         )
             .subscribe {
                 handleResult(it)
+
             }
 
     }
@@ -47,4 +50,5 @@ class ListProductViewModel  : BaseViewModel<ListProductNavigator>() {
             }
         }
     }
+
 }

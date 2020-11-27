@@ -24,6 +24,7 @@ class HomeViewModel : BaseViewModel<HomeNavigator>() {
         Log.v(TAG, "customers button is working")
         getNavigator()?.navigateToCustomer()
     }
+
 }
 
 

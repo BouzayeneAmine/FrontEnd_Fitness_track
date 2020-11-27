@@ -1,4 +1,4 @@
-package com.mestiripesage.gesepese.ui.customer
+package com.mestiripesage.gesepese.ui.customer.addCustomer
 
 import com.mestiripesage.gesepese.data.entities.Camion
 import com.mestiripesage.gesepese.data.entities.Product

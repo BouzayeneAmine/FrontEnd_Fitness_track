@@ -7,14 +7,14 @@
 
         <variable
             name="viewModel"
-            type="com.mestiripesage.gesepese.ui.customer.AddCustomerViewModel" />
+            type="com.mestiripesage.gesepese.ui.customer.addCustomer.AddCustomerViewModel" />
     </data>
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:background="#1B1464"
-        tools:context=".ui.customer.AddCustomerActivity">
+        tools:context=".ui.customer.addCustomer.AddCustomerActivity">
 
         <TextView
             android:id="@+id/textView4"

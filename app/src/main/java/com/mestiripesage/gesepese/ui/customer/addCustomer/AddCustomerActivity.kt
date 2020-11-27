@@ -1,4 +1,4 @@
-package com.mestiripesage.gesepese.ui.customer
+package com.mestiripesage.gesepese.ui.customer.addCustomer
 
 
 import android.util.Log
@@ -11,8 +11,9 @@ import com.mestiripesage.gesepese.databinding.ActivityAddCustomerBinding
 import com.mestiripesage.gesepese.ui.base.BaseActivity
 
 
-class AddCustomerActivity : BaseActivity<ActivityAddCustomerBinding>(),AddCustomerNavigator {
- lateinit var model :AddCustomerViewModel
+class AddCustomerActivity : BaseActivity<ActivityAddCustomerBinding>(),
+    AddCustomerNavigator {
+ lateinit var model : AddCustomerViewModel
 
     override fun setViewModel() {
         model = run {

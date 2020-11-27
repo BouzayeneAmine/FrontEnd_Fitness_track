@@ -24,16 +24,16 @@ class Product {
 
     @SerializedName("code")
     @Expose
-    private var quantity: String? = null
+     var quantity: String? = null
 
 
     @SerializedName("price")
     @Expose
-    private var price: String? = null
+     var price: String? = null
 
     @SerializedName("__v")
     @Expose
-    private var v: Int? = null
+     var v: Int? = null
 
 
 }

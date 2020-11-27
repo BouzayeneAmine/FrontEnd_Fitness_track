@@ -12,7 +12,7 @@ import io.paperdb.Paper
 import io.reactivex.android.schedulers.AndroidSchedulers
 import io.reactivex.schedulers.Schedulers
 
-class LoginViewModel : BaseViewModel<LoginNavigator>() {
+class  LoginViewModel : BaseViewModel<LoginNavigator>() {
     private val TAG = "LoginVIewModel"
     private val useCase =
         LoginUseCase()

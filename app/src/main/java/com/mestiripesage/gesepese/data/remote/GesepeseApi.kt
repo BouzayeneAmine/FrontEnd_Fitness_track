@@ -7,7 +7,7 @@ import com.mestiripesage.gesepese.data.remote.request.customer.CustomerAddReques
 import com.mestiripesage.gesepese.data.remote.request.customer.CustomerUpdateRequest
 import com.mestiripesage.gesepese.data.remote.request.product.ProductAddRequest
 import com.mestiripesage.gesepese.data.remote.request.product.ProductUpdateRequest
-import com.mestiripesage.gesepese.data.remote.request.receipt.RecieptAddRequest
+import com.mestiripesage.gesepese.data.remote.request.reciept.RecieptAddRequest
 import com.mestiripesage.gesepese.data.remote.request.user.LoginRequest
 import com.mestiripesage.gesepese.data.remote.request.user.RegisterRequest
 import com.mestiripesage.gesepese.data.remote.request.user.UpdateRequest
@@ -32,6 +32,7 @@ interface GesepeseApi {
     fun update(@Path("id") id: Long, @Body updateRequest: UpdateRequest): Observable<Data<User>>
 
     // ws Products
+    @Headers("Content-Type:application/json; charset=UTF-8")
     @POST(ApiGesepese.ADD_PRODUCT)
     fun addProduct(@Body productAddRequest: ProductAddRequest): Observable<Data<Product>>
 
